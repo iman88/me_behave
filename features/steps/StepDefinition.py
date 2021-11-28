@@ -1,8 +1,5 @@
 import behave
 
-@behave.given(u'I navigate to "{url}"}')
-def step_impl(context, url):
-    context.driver.get(url)
 
 @behave.given(u'User is on Registration page')
 def step_impl(context):

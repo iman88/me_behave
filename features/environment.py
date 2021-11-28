@@ -1,7 +1,17 @@
+import os
+import platform
+
 from selenium.webdriver import Chrome
 
+
 def before_feature(context, feature):
-    path = 'drivers\\chromedriver.exe'
+    if platform.system() == "Windows":
+        path = 'drivers\\chromedriver.exe'
+    elif platform.system() == "Linux":
+        path = 'drivers\\chromedriver_linux'
+    elif platform.system() == "Darwin":
+        path = 'drivers\\chromedriver_mac'
+
     context.driver = Chrome(executable_path=path)
 
 def after_feature(context, feature):
