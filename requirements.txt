@@ -1,0 +1,3 @@
+selenium==3.141.0
+behave
+allure-behave==2.9.45
